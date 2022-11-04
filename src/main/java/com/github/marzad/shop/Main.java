@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         ProductRepo prodRep = new ProductRepo();
         OrderRepo ordRep = new OrderRepo();
+
         Product prod1 = new Product(1, "Apfel");
         Product prod2 = new Product(2, "Banane");
         Product prod3 = new Product(3, "Birne");
@@ -22,6 +23,7 @@ public class Main {
         ordRep.addEle(ord2);
         ordRep.addEle(ord3);
         System.out.println("Liste der Bestellungen: "+ordRep.list());
+        System.out.println("Order by Id: " +ordRep.getOrderById(1));
 
     }
 }

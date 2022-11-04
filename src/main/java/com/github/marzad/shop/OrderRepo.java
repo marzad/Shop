@@ -18,9 +18,9 @@ public class OrderRepo {
         return orders.get(i);
     }
 
-    public Order getOrderByName(String name) {
+    public Order getOrderById(int i) {
         for (Order s : this.orders) {
-            if (s.getName().equals(name)) {
+            if (s.getOrderID()==i) {
                 return s;
             }
         }
