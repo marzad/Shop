@@ -1,23 +1,42 @@
 package com.github.marzad.shop;
 
-public class Smartphone implements ProductInterface{
+public class Schokoriegel implements ProductInterface{
     String brand;
     String model;
-    double size;
-    int id;
     double price;
+    int id;
     String name;
+    double weight;
 
-    public Smartphone(String brand, String model, double size, int id, double price) {
+    public Schokoriegel(String brand, String model, double price, int id, double weight) {
         this.brand = brand;
         this.model = model;
-        this.name=brand+" "+model;
-        this.size = size;
-        this.id = id;
+        this.name = brand+" "+model;
         this.price = price;
+        this.id = id;
+        this.weight= weight;
     }
-    public Smartphone(){}
+    public Schokoriegel(){}
 
+    @Override
+    public String toString() {
+        return "Schokoriegel{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", price=" + price +
+                ", id=" + id +
+                ", name='" + name + '\'' +
+                ", weight=" + weight +
+                '}';
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
 
     @Override
     public void setId(int id) {
@@ -32,13 +51,12 @@ public class Smartphone implements ProductInterface{
     @Override
     public String getName() {
         if(name != null)
-        return name;
+            return name;
         else return "Kein Name vorhanden";
     }
 
     @Override
     public void setName(String name) {
-        //substring und
         if(name.contains(" ")) {
             String[] s = name.split(" ");
             brand = s[0];
@@ -49,24 +67,12 @@ public class Smartphone implements ProductInterface{
     }
 
     @Override
-    public String toString() {
-        return "Smartphone{" +
-                "brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                ", size=" + size +
-                ", id=" + id +
-                ", price=" + price +
-                ", name='" + name + '\'' +
-                '}';
-    }
-
-    @Override
     public double getPrice() {
         return price;
     }
 
     @Override
     public void setPrice(double price) {
-        this.price=price;
+        this.price = price;
     }
 }
