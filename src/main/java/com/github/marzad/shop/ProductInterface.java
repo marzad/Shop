@@ -1,12 +1,11 @@
 package com.github.marzad.shop;
 
 public interface ProductInterface {
-    void setId();
+
+    void setId(int id);
     int getId();
     String getName();
-    void setName();
+    void setName(String name);
     double getPrice();
-    void setPrice();
-
-
+    void setPrice(double price);
 }
