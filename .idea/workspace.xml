@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b9d7c96-339d-4c0b-8c2e-80ccca216cf8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/marzad/shop/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/marzad/shop/OrderRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/marzad/shop/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/marzad/shop/ProductRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/marzad/shop/ShopService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/marzad/shop/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/marzad/shop/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="4b9d7c96-339d-4c0b-8c2e-80ccca216cf8" name="Changes" comment="Created ShopClasses" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,8 +57,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667550007061</updated>
-      <workItem from="1667585591671" duration="4925000" />
+      <workItem from="1667585591671" duration="5644000" />
     </task>
+    <task id="LOCAL-00001" summary="Created ShopClasses">
+      <created>1667591236972</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667591236972</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,15 +95,8 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/marzad/shop/Main.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created ShopClasses" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created ShopClasses" />
   </component>
 </project>
