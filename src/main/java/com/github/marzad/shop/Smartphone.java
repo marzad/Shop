@@ -1,6 +1,6 @@
 package com.github.marzad.shop;
 
-public class Smartphone implements ProductInterface{
+public class Smartphone extends Product implements ProductInterface{
     String brand;
     String model;
     double size;
