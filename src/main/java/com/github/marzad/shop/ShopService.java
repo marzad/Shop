@@ -24,9 +24,18 @@ public class ShopService {
 
     public void addOrder(Order o) {
         try {
-            ordRepo.addEle(o);
+            //ordRepo.addEle(o);
+            if(prodRepo.getProdByName(o.getProduct().getName())!=null){
+                ordRepo.addEle(o);
+            }
+            else {
+                throw new Exception();
+            }
         } catch (Exception e) {
             System.out.println("Bestellung nicht möglich");
         }
+    }
+    public void addProd(Product name) {
+        prodRepo.addEle(name);
     }
 }

@@ -19,11 +19,16 @@ public class OrderRepo {
     }
 
     public Order getOrderById(int i) {
-        for (Order s : this.orders) {
-            if (s.getOrderID()==i) {
-                return s;
+        try {
+            for (Order s : this.orders) {
+                if (s.getOrderID() == i) {
+                    return s;
+                }
             }
+            return null;
+        }catch (Exception e){
+            System.out.println("Produkt gibt es nicht");
+            return null;
         }
-        return null;
     }
 }
