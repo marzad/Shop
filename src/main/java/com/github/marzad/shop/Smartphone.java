@@ -1,5 +1,7 @@
 package com.github.marzad.shop;
 
+import java.util.Optional;
+
 public class Smartphone extends Product implements ProductInterface{
     String brand;
     String model;
@@ -31,9 +33,14 @@ public class Smartphone extends Product implements ProductInterface{
 
     @Override
     public String getName() {
-        if(name != null)
+/*        if(name != null)
         return name;
-        else return "Kein Name vorhanden";
+        else return "Kein Name vorhanden";*/
+
+        Optional<String> os = Optional.of(this.name);
+        String result;
+        result = os.orElse("Kein Name vorhanden");
+        return result;
     }
 
     @Override
@@ -62,7 +69,11 @@ public class Smartphone extends Product implements ProductInterface{
 
     @Override
     public double getPrice() {
-        return price;
+        Optional<Double> od = Optional.of(this.price);
+        if(od.isPresent()){
+            return price;
+        }
+        return 0;
     }
 
     @Override

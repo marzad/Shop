@@ -1,6 +1,7 @@
 package com.github.marzad.shop;
 
 import java.util.List;
+import java.util.Optional;
 
 public class ShopService {
     ProductRepo prodRepo = new ProductRepo();
@@ -11,15 +12,19 @@ public class ShopService {
     }
 
     public List<Product> listProducts() {
-        return prodRepo.list();
+        return prodRepo.getProductList();
     }
 
-    public Order getOrder(int i) {
+    public Order getOrder(int i){
         return ordRepo.getOrderById(i);
     }
 
-    public List<Order> listOrders() {
-        return ordRepo.list();
+    public List<Order> getListOrders() {
+        Optional<List> ol = Optional.of(ordRepo.getList());
+        if(ol.isPresent()) {
+            return ordRepo.getList();
+        }
+        return null;
     }
 
     public void addOrder(Order o) {

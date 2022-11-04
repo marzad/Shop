@@ -1,5 +1,9 @@
 package com.github.marzad.shop;
 
+import org.assertj.core.internal.bytebuddy.dynamic.DynamicType;
+
+import java.util.Optional;
+
 public class Schokoriegel extends Product implements ProductInterface{
     String brand;
     String model;
@@ -45,14 +49,18 @@ public class Schokoriegel extends Product implements ProductInterface{
 
     @Override
     public int getId() {
-        return id;
+        Optional<Integer> oi = Optional.of(this.id);
+        return oi.get();
     }
 
     @Override
     public String getName() {
-        if(name != null)
+/*        if(name != null)
             return name;
-        else return "Kein Name vorhanden";
+        else return "Kein Name vorhanden";*/
+
+        Optional<String> oi = Optional.of(this.name);
+        return oi.orElse("Kein Name vorhanden.");
     }
 
     @Override
@@ -68,7 +76,8 @@ public class Schokoriegel extends Product implements ProductInterface{
 
     @Override
     public double getPrice() {
-        return price;
+        Optional<Double> od = Optional.of(this.price);
+        return od.get();
     }
 
     @Override

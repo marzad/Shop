@@ -14,7 +14,7 @@ class ProductRepoTest {
 
         liste.addEle(name);
 
-        assertTrue(!liste.list().isEmpty());
+        assertTrue(!liste.getProductList().isEmpty());
     }
 
     @Test

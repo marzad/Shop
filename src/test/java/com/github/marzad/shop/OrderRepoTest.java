@@ -14,7 +14,7 @@ class OrderRepoTest {
 
         liste.addEle(name);
 
-        assertTrue(!liste.list().isEmpty());
+        assertTrue(!liste.getList().isEmpty());
     }
 
     @Test

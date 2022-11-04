@@ -1,5 +1,7 @@
 package com.github.marzad.shop;
 
+import java.util.Optional;
+
 public class Product {
     private int id;
     private String name;
@@ -19,7 +21,8 @@ public class Product {
     }
 
     public int getId() {
-        return id;
+        Optional<Integer> oi = Optional.of(this.id);
+        return oi.get();
     }
 
     public void setId(int id) {
@@ -27,7 +30,8 @@ public class Product {
     }
 
     public String getName() {
-        return name;
+        Optional<String> os = Optional.of(this.name);
+        return os.get();
     }
 
     public void setName(String name) {

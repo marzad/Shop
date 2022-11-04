@@ -11,6 +11,6 @@ class ShopServiceTest {
         Order o = new Order(1, new Product(1, "Banane"));
         ShopService list = new ShopService();
         list.addOrder(o);
-        assertFalse(!list.listOrders().isEmpty());
+        assertFalse(!list.getListOrders().isEmpty());
     }
 }

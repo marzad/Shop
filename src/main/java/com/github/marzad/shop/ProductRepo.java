@@ -2,6 +2,7 @@ package com.github.marzad.shop;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class ProductRepo extends Product {
     private List<Product> products = new ArrayList();
@@ -10,8 +11,12 @@ public class ProductRepo extends Product {
         products.add(name);
     }
 
-    public List<Product> list() {
-        return products;
+    public List<Product> getProductList() {
+        Optional<List> ol = Optional.of(products);
+        if(ol.isPresent()){
+            return products;
+        }
+        return null;
     }
 
     public Product get(int i) {
@@ -19,11 +24,23 @@ public class ProductRepo extends Product {
     }
 
     public Product getProdByName(String name) {
-        for (Product s : this.products) {
+/*        for (Product s : this.products) {
             if (s.getName().equals(name)) {
                 return s;
             }
         }
-        return null;
+        return null;*/
+
+        Optional<Product> op = Optional.empty();
+        for (Product s : this.products) {
+            if (s.getName().equals(name)) {
+                op = Optional.of(s);
+            }
+        }
+        if(op.isEmpty()){
+            System.out.println("Produkt gibt's nicht.");
+            return null;
+        }
+        else return op.get();
     }
 }
