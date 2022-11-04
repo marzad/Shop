@@ -41,5 +41,12 @@ public class Main {
         System.out.println("Order by Id: " +ordRep.getOrderById(1));
         System.out.println("Order by Id: " +ordRep.getOrderById(2));
 */
+
+        Smartphone nokia = new Smartphone();
+        Smartphone fake = new Smartphone();
+        fake.setName("nopenopenope");
+        nokia.setName("Samsung Galaxy");
+        System.out.println(nokia.getName());
+        System.out.println(fake.getName());
     }
 }

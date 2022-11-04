@@ -31,12 +31,18 @@ public class Smartphone implements ProductInterface{
 
     @Override
     public String getName() {
+        if(name != null)
         return name;
+        else return "Kein Name vorhanden";
     }
 
     @Override
     public void setName(String name) {
-        if(name.equals(brand+" "+model)) {
+        //substring und
+        if(name.contains(" ")) {
+            String[] s = name.split(" ");
+            brand = s[0];
+            model = s[1];
             this.name = name;
         }
         else {System.out.println("Fehlerhafter Name!");}
