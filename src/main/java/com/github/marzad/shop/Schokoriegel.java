@@ -1,6 +1,6 @@
 package com.github.marzad.shop;
 
-public class Schokoriegel implements ProductInterface{
+public class Schokoriegel extends Product implements ProductInterface{
     String brand;
     String model;
     double price;
